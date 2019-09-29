@@ -1,5 +1,5 @@
 # zsh-safe-rm
-ZSH Plugin to add safe-rm functionality so that `rm` will put files in the trash.
+ZSH plugin to add safe-rm functionality so that `rm` will put files in your OS's trash instead of permanently deleting them.
 
 Installable with:
 - [zgen](https://github.com/tarjoilija/zgen): `zgen load mattmc3/zsh-safe-rm`
