@@ -16,11 +16,11 @@ As with all zsh commands, if you need to get back to the builtin `rm`, there are
 # simply use a leading backslash
 \rm -i obliterate_me.txt
 
-# or use 'command' prefix (zsh pre-command modifier)
+# or use 'command' prefix (command is a "zsh precommand modifier")
 command rm -i nuke_it_from_orbit.txt
 
 # or make an alias in .zshrc
-alias unsafe-rm="\rm -i"
+alias unsafe-rm="command rm -i"
 unsafe-rm this_is_really_gonna_hurt.txt
 ```
 
@@ -38,4 +38,10 @@ Installable with:
 - [antigen](https://github.com/zsh-users/antigen): `antigen bundle mattmc3/zsh-safe-rm`
 
 
+## Reference
+
+- [zsh-precmd] Precommand modifiers
+
+
 [safe-rm]: https://github.com/kaelzhang/shell-safe-rm
+[zsh-precmd]: http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Precommand-Modifiers
