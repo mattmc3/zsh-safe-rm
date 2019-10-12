@@ -8,10 +8,18 @@ ZSH plugin to add safe-rm functionality so that `rm` will put files in your OS's
 
 `del` is also aliased to `safe-rm` to help re-habit your muscle memory to a less destructive command. That way, if you are ever on a system without `safe-rm`, you don't get too confortable with its new, safer behavior.
 
-As with all zsh commands, if you need to get back to the builtin `rm`, use a leading backslash like so:
+As with all zsh commands, if you need to get back to the builtin `rm`, there are options:
 ```shell
+# simply use a leading backslash
 \rm -i obliterate_me.txt
-````
+
+# or use 'command' prefix (zsh pre-command modifier)
+command rm -i nuke_it_from_orbit.txt
+
+# or make an alias in .zshrc
+alias unsafe-rm="\rm -i"
+unsafe-rm this_is_really_gonna_hurt.txt
+```
 
 ## Installation
 
