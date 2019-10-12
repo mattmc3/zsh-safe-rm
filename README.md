@@ -28,7 +28,7 @@ Installable with:
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
   ``` shell
   ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom}
-  git clone --recursive https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
+  git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
   # now add zsh-safe-rm to your plugins variable in .zshrc
   ```
 - [antibody](https://getantibody.github.io): `antibody bundle mattmc3/zsh-safe-rm`
