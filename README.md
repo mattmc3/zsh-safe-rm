@@ -38,9 +38,17 @@ Installable with:
 - [antigen](https://github.com/zsh-users/antigen): `antigen bundle mattmc3/zsh-safe-rm`
 
 
+## Contributing
+
+This project is a zsh plugin wrapper for the [shell-safe-rm][safe-rm] project and assumes no liability for the
+functionality of that utility. Bugs or issues with the `safe-rm` functionality should be submitted to that project's
+maintainer.
+
+
 ## Reference
 
-- [zsh-precmd] Precommand modifiers
+- [shell-safe-rm][safe-rm]
+- [Precommand modifiers][zsh-precmd]
 
 
 [safe-rm]: https://github.com/kaelzhang/shell-safe-rm
