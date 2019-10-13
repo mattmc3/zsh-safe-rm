@@ -1,5 +1,9 @@
-0=${(%):-%N}
-path+=( ${0:A:h}/bin )
+# prefer del
+alias del="${0:A:h}/shell-safe-rm/bin/rm.sh"
 
-alias rm="safe-rm"
-alias del="safe-rm"
+# for if you forget and use rm
+alias rm="${0:A:h}/shell-safe-rm/bin/rm.sh"
+
+# if you want to be explicit about whether the command is safe/unsafe
+alias safe-rm="${0:A:h}/shell-safe-rm/bin/rm.sh"
+alias unsafe-rm="command rm"
