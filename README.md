@@ -30,7 +30,7 @@ Installable with:
 - [zgen](https://github.com/tarjoilija/zgen): `zgen load mattmc3/zsh-safe-rm`
 - [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
   ``` shell
-  ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom}
+  ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom/plugins}
   git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
   # now add zsh-safe-rm to your plugins variable in .zshrc
   ```
