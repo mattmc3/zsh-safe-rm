@@ -1,6 +1,6 @@
 # zsh-safe-rm
 
-ZSH plugin to add [safe-rm] functionality so that `rm` will put files in your OS's trash instead of permanently deleting
+> Zsh plugin to add [safe-rm] functionality so that `rm` will put files in your OS's trash instead of permanently deleting
 them.
 
 ## Usage
@@ -32,14 +32,15 @@ Add the following to your `.zshrc`:
 
 ```zsh
 [[ -d ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm ]] || \
-  git clone --depth 1 https://github.com/mattmc3/zsh-safe-rm ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm
+  git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm
 source ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm/zsh-safe-rm.plugin.zsh
 ```
 
 ### With a plugin manager
 
-This plugin should work with most Zsh plugin managers. See the documentation for your preferred plugin manager
-for installation instructions. Or, if you don't already have one, have a look at [antidote](https://getantidote.github.io).
+This plugin should work with most Zsh plugin managers, assuming they support git submodules. See the documentation for your
+preferred plugin manager for installation instructions. Or, if you don't already have one or yours doesn't support submodules,
+have a look at [antidote](https://getantidote.github.io).
 
 ```zsh
 antidote install mattmc3/zsh-safe-rm
@@ -49,7 +50,7 @@ antidote install mattmc3/zsh-safe-rm
 
 ``` shell
 ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom/plugins}
-git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
+git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm $ZSH_CUSTOM/zsh-safe-rm
 # now add zsh-safe-rm to your plugins array in .zshrc
 ```
 
