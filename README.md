@@ -26,17 +26,32 @@ unsafe-rm this_is_really_gonna_hurt.txt
 
 ## Installation
 
-Installable with:
-- [zgen](https://github.com/tarjoilija/zgen): `zgen load mattmc3/zsh-safe-rm`
-- [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
-  ``` shell
-  ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom/plugins}
-  git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
-  # now add zsh-safe-rm to your plugins variable in .zshrc
-  ```
-- [antibody](https://getantibody.github.io): `antibody bundle mattmc3/zsh-safe-rm`
-- [antigen](https://github.com/zsh-users/antigen): `antigen bundle mattmc3/zsh-safe-rm`
+### Manually
 
+Add the following to your `.zshrc`:
+
+```zsh
+[[ -d ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm ]] || \
+  git clone --depth 1 https://github.com/mattmc3/zsh-safe-rm ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm
+source ${ZDOTDIR:-~}/.zplugins/zsh-safe-rm/zsh-safe-rm.plugin.zsh
+```
+
+### With a plugin manager
+
+This plugin should work with most Zsh plugin managers. See the documentation for your preferred plugin manager
+for installation instructions. Or, if you don't already have one, have a look at [antidote](https://getantidote.github.io).
+
+```zsh
+antidote install mattmc3/zsh-safe-rm
+```
+
+### With oh-my-zsh
+
+``` shell
+ZSH_CUSTOM=${ZSH_CUSTOM:-$ZSH/custom/plugins}
+git clone --recursive --depth 1 https://github.com/mattmc3/zsh-safe-rm.git $ZSH_CUSTOM/zsh-safe-rm
+# now add zsh-safe-rm to your plugins array in .zshrc
+```
 
 ## Contributing
 
@@ -52,4 +67,4 @@ maintainer.
 
 
 [safe-rm]: https://github.com/kaelzhang/shell-safe-rm
-[zsh-precmd]: http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Precommand-Modifiers
+[zsh-precmd]: http://zsh.sourceforge.io/Doc/Release/Shell-Grammar.html#Precommand-Modifiers
